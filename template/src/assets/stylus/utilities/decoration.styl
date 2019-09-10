@@ -1,0 +1,10 @@
+.radius
+  border-radius: $radius-base
+  for $prop, $value in $radius-list
+    &-{$prop}
+      border-radius: $value !important
+.shadow
+  box-shadow: $shadow-base
+  for $prop, $value in $shadow-list
+    &-{$prop}
+      box-shadow: $value !important

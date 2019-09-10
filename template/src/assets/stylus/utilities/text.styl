@@ -1,0 +1,19 @@
+.text
+  &-center
+    text-align: center !important
+  &-left
+    text-align: left !important
+  &-right
+    text-align: right !important
+  &-through
+    text-decoration: line-through !important
+  &-bold
+    font-weight: bold !important
+  &-size
+    for $size, $value in $font-sizes
+      &-{$size}
+        font-size: $value !important
+  &-hl
+    for $size, $value in $line-heights
+      &-{$size}
+        line-height: $value !important 

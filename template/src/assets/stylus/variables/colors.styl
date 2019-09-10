@@ -1,0 +1,68 @@
+$primary       := #5473E8
+$secondary     := #37C2CE
+
+$grey-base := #111112;
+
+
+$grey-dark     := $grey-base
+$grey-grey     := lighten($grey-base, 40%)
+$grey-light    := lighten($grey-base, 60%)
+$border-color  := lighten($grey-base, 80%)
+$bg-color      := lighten($grey-base, 90%)
+
+
+$red := #dd5151;
+$green := #6AC976;
+$blue := #03BFFB;
+$purple := #A388EF;
+$deep-purple := #6e4ac1;
+$teal := #189d94;
+$yellow := #fedb4e;
+$orange := #fc900d;
+$deep-orange := #d74b0f;
+
+$lg-primary := linear-gradient(to right bottom, #13E48C, #08CECE);
+$lg-secondary := linear-gradient(to right bottom, #FABE23, #FF9D0A);
+$bg-red-orange = linear-gradient(to bottom right, #f01414, #fe7f17)
+$lg-cyan-blue = linear-gradient(to bottom right, #0de5ec, #0f75df)
+$lg-blue-purple = linear-gradient(to right bottom, #18c9ff, #711be7)
+$lg-green-blue = linear-gradient(to bottom right, #0ac57d, #00b7f9)
+$lg-purple-deep-light = linear-gradient(to bottom right, #ad3aff, #ff61c5)
+$lg-orange-deep-light = linear-gradient(to bottom right, #ff5a16, #ffbe4d)
+$lg-pink-orange = linear-gradient(to bottom right, #ff0a6d, #ff9f04)
+$lg-red-deep-bottom = linear-gradient(#ec5050, #c22828)
+$lg-red-purple-bottom = linear-gradient($red, $deep-purple)
+$lg-cyan-yellow-bottom = linear-gradient(#10e9df, #ffcc00)
+
+$colors = {
+  'primary': $primary,
+  'secondary': $secondary,
+  'red': $red,
+  'green': $green,
+  'blue': $blue,
+  'purple': $purple,
+  'deep-purple': $deep-purple,
+  'teal': $teal,
+  'yellow': $yellow,
+  'orange': $orange,
+  'deep-orange':$deep-orange,
+  'white': #fff
+};
+
+$grey-colors = {
+  '0': $grey-base,
+  '1': (lighten($grey-base, 10%)),
+  '2': (lighten($grey-base, 20%)),
+  '3': (lighten($grey-base, 30%)),
+  '4': (lighten($grey-base, 40%)),
+  '5': (lighten($grey-base, 50%)),
+  '6': (lighten($grey-base, 60%)),
+  '7': (lighten($grey-base, 70%)),
+  '8': (lighten($grey-base, 80%)),
+  '9': (lighten($grey-base, 90%))
+};
+
+$lg-colors = {
+  primary: $lg-primary,
+  secondary: $lg-secondary,
+}

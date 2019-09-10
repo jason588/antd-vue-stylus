@@ -1,0 +1,178 @@
+
+.scroll-body
+  flex: 1
+  overflow: hidden;
+  box-sizing: border-box;
+
+.disabled
+  pointer-events: none
+  opacity: .5
+.rds
+  border-radius: $rds
+.bar
+  height: $h-bar
+  fine-border(top, $border-light)
+  position: fixed;
+  background-color: #fff
+  left: 0;
+  right: 0
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  z-index: 9
+  input
+    height: $h-bar
+    flex: 1
+    min-height: none !important
+  &.static
+    position: static;
+  &.relative
+    position: relative;
+
+
+.tl
+  text-align: left
+.tr
+  text-align: right
+.tc
+  text-align: center
+
+.t-xs
+  font-size: $font-xs !important
+.t-sm
+  font-size: $font-sm !important
+.t-md
+  font-size: $font-md !important
+.t-lg
+  font-size: $font-lg !important
+.t-xl
+  font-size: $font-xl !important
+.t-xxl
+  font-size: $font-xxl !important
+.t-xxxl
+  font-size: $font-xxxl !important
+
+.lh
+  line-height: 1 !important
+.lh-xs
+  line-height: 1.2 !important
+.lh-sm
+  line-height: 1.5 !important
+.lh-md
+  line-height: 2 !important
+.lh-lg
+  line-height: 2.4 !important
+
+.icon-xs
+  font-size: $icon-xs !important
+.icon-sm
+  font-size: $icon-sm !important
+.icon-md
+  font-size: $icon-md !important
+.icon-lg
+  font-size: $icon-lg !important
+.icon-xl
+  font-size: $icon-xl !important
+.icon-xxl
+  font-size: $icon-xxl !important
+
+.scale-text
+  transform: scale(.85);
+
+
+.cir-xs
+  circular(24px)
+.cir-sm
+  circular(32px)
+.cir-md
+  circular(48px)
+.cir-lg
+  circular(60px)
+.cir-xl
+  circular(72px)
+.cir-xxl
+  circular(96px)
+
+ul
+  list-style: none
+  margin: 0
+  padding: 0
+
+.p-rel
+  position: relative !important
+.p-abs
+  position: absolute !important
+.p-fix
+  position: fixed !important
+.p-sta
+  position: static !important
+.po-right-top
+  right: 0
+  top:0
+.po-left-top
+  left: 0
+  top:0
+.po-left-bottom
+  left: 0
+  bottom:0
+.po-right-bottom
+  right: 0
+  bottom:0
+
+
+
+.bg-box
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
+.g-row
+  clearfix()
+  padding: 5px
+  .g-col
+    float: left;
+    padding: 5px
+    box-sizing: border-box;
+
+.title
+  font-size: $font-md
+  color: $text-dark
+  margin: 0
+.desc
+  font-size: $font-xs
+  color: $text-light
+  line-height: 1.5
+h4.title
+  font-size: $font-lg
+  font-weight: bold;
+  color: $text-dark
+.rds
+  border-radius: $rds !important
+
+.bold
+  font-weight: bold !important;
+.block
+  display: block !important;
+.line1
+  ellipsis();
+.line2
+  ellipsis-more(2);
+.line3
+  ellipsis-more(3);
+
+.line-top
+  fine-border(top, $border-light)
+.line-left
+  fine-border(left, $border-light)
+.line-right
+  fine-border(right, $border-light)
+.line-bottom
+  fine-border(bottom, $border-light)
+.line-tb
+  fine-border-two(tb, $border-light)
+.line-lr
+  fine-border-two(lr, $border-light)
+
+
+.text-block
+  font-size: 14px
+  line-height: 2

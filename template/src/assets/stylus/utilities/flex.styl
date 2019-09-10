@@ -1,0 +1,56 @@
+.flex
+  display: flex;
+
+  &-ai
+    &-center
+      align-items: center !important
+
+    &-end
+      align-items: flex-end !important
+
+    &-stretch
+      align-items: stretch !important
+
+  &-jc
+    &-end
+      justify-content: flex-end !important
+
+    &-center
+      justify-content: center !important
+
+    &-between
+      justify-content: space-between !important
+
+    &-around
+      justify-content: space-around !important
+
+  &-self
+    &-center
+      align-self: center !important
+
+    &-end
+      align-self: flex-end !important
+
+  &-wrap
+    flex-wrap: wrap !important
+
+  &-direction
+    &-column
+      flex-direction: column !important
+
+  &-flex-1
+    flex: 1;
+    overflow: hidden;
+
+  &-body
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: normal;
+
+    &-middle-wrap
+      flex: 1;
+      overflow: hidden;
+      margin: 3px 0

@@ -1,0 +1,180 @@
+
+abs-full()
+  position: absolute;
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+
+box-middle($x = -50%, $y = -50%)
+  position: absolute
+  left: 50%
+  top: 50%
+  transform:translate($x, $y)
+text($size=$font-md,$color=$text-dark,$line=1.2)
+  font-size: $size
+  color: $color
+  line-height: $line
+
+fixedbox-middle($w, $h)
+  position: absolute
+  left: 50%
+  top: 50%
+  margin-left: (-$w / 2)
+  margin-top: (-$h / 2)
+box-center($w, $mt = 0, $mb = 0)
+  width: $w
+  margin: $mt auto $mb
+right-middle($right = 15px, $x = 0, $y = -50%)
+  position: absolute
+  right: $right
+  top: 50%
+  transform:translate($x, $y)
+left-middle($left = 15px, $x = 0, $y = -50%)
+  position: absolute
+  left: $left
+  top: 50%
+  transform:translate($x, $y)
+ellipsis()
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+ellipsis-more($lines)
+  display: -webkit-box
+  overflow: hidden
+  text-overflow: ellipsis
+  word-wrap: break-word
+  white-space: normal !important
+  -webkit-line-clamp: $lines
+  -webkit-box-orient: vertical
+font-text($size = $font-sm ,$color = $text-dark ,$lineh = 1.4)
+  font-size: $size;
+  color: $color
+  line-height: $lineh
+circular($size)
+  width: $size
+  height: $size
+  border-radius: 50%
+  display: flex
+  line-height: 1
+  align-items: center
+  justify-content: center
+full-box($top = 0, $right = 0, $bottom = 0, $left = 0)
+  position: absolute
+  top: $top
+  right: $right
+  bottom: $bottom
+  left: $left
+bg-box()
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+fine-border($direction, $border-color, $left = 0, $right = 0)
+  position: relative
+  &:before
+    content: ""
+    position: absolute
+    background-color: $border-color
+    z-index: 1
+    if $direction == top
+      height: 1px
+      left: $left
+      right: $right
+      top: 0
+      transform: scaleY(0.33)
+      transform-origin: top
+    if $direction == bottom
+      height: 1px
+      left: $left
+      right: $right
+      bottom: 0
+      transform: scaleY(0.33)
+      transform-origin: bottom
+    if $direction == left
+      width: 1px
+      left: 0
+      top: 0
+      bottom: 0
+      transform: scaleX(0.33)
+      transform-origin: left
+    if $direction == right
+      width: 1px
+      top: 0
+      right: 0
+      bottom: 0
+      transform: scaleX(0.33)
+      transform-origin: right
+fine-border-two($direction, $border-color)
+  position: relative
+  if $direction == tb
+    &:before,&:after
+      content: ""
+      position: absolute
+      background-color: $border-color
+      transform: scaleY(0.33)
+      height: 1px
+      left: 0
+      right: 0
+    &:before
+      top: 0
+      transform-origin: top
+    &:after
+      bottom: 0
+      transform-origin: bottom
+  if $direction == lr
+    &:before,&:after
+      content: ""
+      position: absolute
+      background-color: $border-color
+      transform: scaleX(0.33)
+      width: 1px
+      top: 0
+      bottom: 0
+    &:before
+      left: 0
+    &:after
+      right: 0
+icon-size($size)
+  font-size: $size
+  display: inline-block
+  width: $size
+  height: $size
+  line-height: $size
+  text-align: center
+  i
+    display: block
+    font-size: $size
+    width: 100%
+    height: 100%
+
+fine-border-box($bc,$rds)
+  // border:1px solid rgba(#000,0)
+  position: relative;
+  border-radius: $rds
+  &:after
+    content: ""
+    border: 1px solid $bc
+    border-radius: $rds * 2;
+    position: absolute;
+    box-sizing: border-box;
+    display: block
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 200%
+    transform: scale(.5) ;
+    transform-origin: 0 0
+
+arrow-box($size,$color,$direction)
+  position: absolute;
+  right: 0
+  top: 50%
+  margin-top: -($size / 2)
+  border:  0 solid $color
+  transform: rotate(45deg);
+  width: $size
+  height: $size
+  if $direction == bottom
+    border-right-width: 2px
+    border-bottom-width: 2px

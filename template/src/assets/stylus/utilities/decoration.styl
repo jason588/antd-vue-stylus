@@ -7,4 +7,13 @@
   box-shadow: $shadow-base
   for $prop, $value in $shadow-list
     &-{$prop}
-      box-shadow: $value !important
+      box-shadow: $value !important 
+
+.line
+	&-bottom
+		border-bottom:1px solid $border-color
+		
+.media
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover

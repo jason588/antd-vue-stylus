@@ -5,7 +5,7 @@
         <i class="icon" :class="icon" v-if="icon"></i>
         <h4>{{title}}</h4>
       </div>
-      <router-link :to="morLink" v-if="morLink" class="more">{{moreText || '更多'}}</router-link>
+      <router-link :to="morLink" v-if="morLink" class="more">{{moreText}}</router-link>
     </div>
     <div class="card-body" :class="bodyClass">
       <slot></slot>
@@ -19,7 +19,10 @@ export default {
     title:String,
     morLink:[String,Object],
     height:[String,Number],
-    moreText:String,
+    moreText:{
+      type: String,
+      default: '更多'
+    },
     icon:String,
     bodyClass:String,
     padding:{
